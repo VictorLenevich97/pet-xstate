@@ -1,15 +1,11 @@
 import { useMachine } from "@xstate/react";
-import { usersMachine } from "./usersMachine";
-
-import "./App.css";
+import { usersMachine } from "./machines/usersMachine";
 
 function App() {
   const [
     {
-      value,
       context: { users },
     },
-    send,
   ] = useMachine(usersMachine);
 
   console.log("users", users);
